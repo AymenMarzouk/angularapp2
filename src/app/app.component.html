@@ -1,0 +1,165 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css" rel="stylesheet" />
+<!-- Start Navbar -->
+<div class="navbar-area smart-scroll">
+
+    <nav class="navbar   navbar-expand-md navbar-light">
+      <a class="navbar-brand" routerLink="/acceuil" style="color:aliceblue;font-family: Arial, sans-serif;font-weight: bold;color: rosybrown;"> S2ADTECH</a>
+     <button  style="background-color:white" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse" aria-controls=".navbar-collapse" 
+     aria-expanded="false" aria-label="Toggle navigation" (clickOutside)="onClickedOutside($event)"  (click)="onClickedBtn()">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse"   >
+     
+        <div> <!--id="n1"-->
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+          <li class="nav-item ">
+            <a class="nav-link" routerLink="/acceuil">{{'menu1.item1' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/service">{{'menu1.item2' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/formation">{{'menu1.item3' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/carriere">{{'menu1.item4' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/apropos">{{'menu1.item5' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/contact">{{'menu1.item6' | translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " (click)="ch()" routerLink="/test/login">{{'menu1.item7' | translate}}</a>
+          </li>
+         
+
+         
+       <li class="nav-item ">
+        <div class="dropdown "> 
+          <button class="dropbtn"> 
+              Langue 
+          </button> 
+            
+          <div class="dropdown-content "> 
+              <a href="#" (click)="translate.use(translate.getLangs()[1])"> <img src= "/assets/img/france-flag-png.png" width="20" height="15"> {{translate.getLangs()[1]}}</a> 
+              <a href="#"  (click)="translate.use(translate.getLangs()[0])"> <img src= "/assets/img/united-kingdom-flag-png.png" width="20" height="15"> {{translate.getLangs()[0]}}</a> 
+          
+          </div> 
+      </div> 
+       </li>
+         
+        </ul>
+      </div>
+        </div>
+      
+     
+    
+    </nav>
+    
+
+    </div>
+
+ 
+    <!-- End Navbar -->
+    
+    
+    
+    
+    <router-outlet></router-outlet>
+    
+      <!-- Start Footer Area -->
+      <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a href="#" style="color:aliceblue;font-family: Arial, sans-serif;font-weight: bold;color: rosybrown;">S2ADTECH</a>
+                            
+                        </div>
+    
+                        <ul class="social">
+                            <li><a href="#" target="_blank"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="flaticon-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="flaticon-instagram-logo"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="flaticon-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Services</h3>
+    
+                        <ul class="footer-services-list">
+                            <li><a href="#">Product Engineering</a></li>
+                            <li><a href="#">UX/UI Design</a></li>
+                            <li><a href="#">Big Data Analysis</a></li>
+                            <li><a href="#">Desktop Applications</a></li>
+                            <li><a href="#">Mobile Applications</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Quick Links</h3>
+    
+                        <ul class="quick-links-list">
+                            <li><a routerLink="/acceuil">Acceuil</a></li>
+                            <li><a routerLink="/service">Services</a></li>
+                            <li><a routerLink="/formation">Formation</a></li>
+                            <li><a routerLink="/carriere">Carriére</a></li>
+                            <li><a routerLink="/test/login">Test</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Contacts</h3>
+    
+                        <ul class="footer-contact-list">
+                            <li><span>Address:</span> 	30 B RUE DE LA SAUSSAYE 91300 MASSY</li>
+                            <li><span>Email:</span> <a href="#">alahmar@s2ad-tech.org</a></li>
+                            <li><span>Phone:</span> <a href="#">0033651405982</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <p>Copyright 2021 <a href="#">S2ad Tech</a>. All Rights Reserved.</p>
+                    </div>
+    
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="circle-map"><img src="assets/img/circle-map.png" alt="image"></div>
+    
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+    
+    
+    
+    
+    
+    

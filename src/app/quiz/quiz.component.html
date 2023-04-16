@@ -1,0 +1,185 @@
+ 
+<!-- Start Page Title Area -->
+
+
+
+<div *ngIf="completedscore" id="result">
+
+    <!-- Start Page Title Area -->
+    
+    <div class="page-title-area item-bg2">
+    <div class="container">
+      <div class="page-title-content">
+          <h2>Tests</h2>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li>Tests</li>
+          </ul>
+      </div>
+    </div>
+    </div>
+    <!-- End Page Title Area -->
+    
+    <section class="services-area bg-f2f6f9 ptb-110">
+    <div class="section-title">
+    </div>
+    
+    
+    <br>
+    <div class="social-box">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8  mx-auto">
+              
+              
+                  <div class="box">
+                      
+                      <div class="box-title">
+                          <img src="/assets/images/score3.png" alt="image" style="height: 120px;padding: 10px;">
+                          <h3>votre score est : &nbsp;{{resultat}} %</h3> 
+                          <div *ngIf ="flagechecsucces == 1 "><h3><label style="float: right; color: green;">Success <img src="/assets/images/succes.png" alt="image" style="height: 60px;padding: 10px;"></label> </h3></div>
+                         
+                          <div *ngIf="flagechecsucces == 0"><h3><label style="float: right; color: red;">Failed<img src="/assets/images/failed.png" alt="image" style="height: 60px;padding: 10px;"></label> </h3></div>
+    
+                      </div>
+                      <br><br><br> 
+                      <h6> Pour le : &nbsp;{{Tests[0].titre}}</h6>
+                      <div class="d-flex align-items-center justify-content-between mt-1" >
+                          <h3 class="font-weight-bold my-2"> 
+                          
+                          <img src="/assets/images/question.png" alt="image" style="height: 80px;">{{Tests[0].nb_questions}} Questions
+                          <img src="/assets/images/time.png" alt="image" style="height: 60px;">{{Tests[0].nb_minutes}} Minutes	
+                          
+                          </h3>
+                        </div>
+                        <br>
+                        <h6> Numero d'essai : &nbsp;<label class="nombre" >{{essai_id}}</label></h6>
+                      
+    
+                  
+              
+          <div >
+              
+              <div class="box-title">
+                  <br>
+                 
+                      <h6>Réponses correctes :  &nbsp;<label class="nombre" >{{reponse_correcte}}</label></h6>
+                      <br>
+                      <h6>Réponse incorrectes: &nbsp;<label class="nombre" >{{nb_reponse_incorrectes}}</label></h6>
+                      <br>
+                      <h6>Question répondues: &nbsp;<label class="nombre" >{{question_repondues}}</label></h6>
+                      <br>
+                      <h6>Question non répondues: &nbsp;<label class="nombre" >{{question_non_repondues}}</label></h6>
+              </div>
+               
+                  
+                 
+              
+               
+          </div>
+                   
+      </div>
+                   
+    </div>
+              
+      
+    
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    
+    
+    <div *ngIf="!completedscore">
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-caption">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.page-header-->
+    <!-- news -->
+    
+    <div *ngFor="let test of Tests" class="container mt-5 supreme-container">
+    <div class="card-section">
+        <div class="container">
+            <div class="card-block bg-white mb30">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <!-- section-title -->
+                        <div class="section-title mb-0">
+                            <div>
+                            <h2>{{test.titre}}</h2>
+                            <span style =" float: right;margin-right: 10px;font-weight: 700;color:orangered">({{compteurQuestion+1}} of {{test.nb_questions}})</span>
+                            <countdown    style =" float: right;margin-right: 10px;font-weight: 700;color:orangered" #countdown [config]="{leftTime:test.duree*60, demand:true}" (event)="countdownonFinished($event)" >$!m!:$!s!</countdown>
+                           
+                        </div>
+                            
+                             <div *ngIf="beforeQ" class="d-flex flex-row align-items-center question-title">
+                                 <h3 class="">{{test.description}}</h3>
+                             </div>
+                             <ul *ngIf="!beforeQ" >
+                                 <li>
+                                     
+                                         <div>
+                                             
+                                             
+                                             <div>
+                                            
+                                                 <h5  disabled="true">{{Questions[compteurQuestion].texte}}</h5>
+                                             </div>
+                                             <div>
+                                             <div *ngFor="let reponse of Reponses" >
+                                                
+                                                 <div class="mt-3">
+                                                  <div class="p-2 rounded checkbox-form">
+                                                    <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"  id="{{reponse.id}}"   [checked]="verifchecked(reponse.id)" (change)="checkValue(reponse.id,$event)"> 
+                                                    <label [attr.for]="reponse.id" class=" newsletter form-check-label"   > {{reponse.texte}} </label>
+                                                 </div>
+                                                </div>
+                                            </div>
+                                                
+                                             </div>
+                                         </div>
+                                         </div>
+                                     </li>
+                                
+                                 
+                             </ul>
+                             <div >
+                                 <div *ngIf="!beforeQ" >
+                                     
+                                 <button (click)="precedente()" *ngIf="compteurQuestion!=0" class="btn btn-lg prec" type="button">
+                                     <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Question précédente</button>
+                                     
+                                     <button (click)="suivante()" *ngIf="compteurQuestion+1!=test.nb_questions" class="btn btn-lg suiv "  type="button">Question suivante<i class="fa fa-angle-right ml-2"></i></button>
+                                    
+                                     <button (click)="submit()" *ngIf="compteurQuestion+1===test.nb_questions" class="btn btn-lg "  type="button">Finaliser le test<i class="fa fa-angle-right ml-2"></i></button>
+                                 </div>
+                                
+                                    <div *ngIf="beforeQ" >
+                                        <br>
+                                        <button (click)="countdown.resume();passertest()" class="btn btn-lg" type="button">Passer le test<i class="fa fa-angle-right ml-2"></i></button>
+                                    </div>
+                                </div>
+                    
+                    
+                    
+                        
+                        </div>
+                        <!-- /.section-title -->
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            </div>
+        </div>
+        </div>

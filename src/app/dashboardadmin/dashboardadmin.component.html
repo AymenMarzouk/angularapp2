@@ -1,0 +1,204 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>Tests</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+<!-- End Page Title Area -->
+
+<body>
+    <div class="container main-content">
+        <div class="row">
+            
+        <div class="col-md-12">
+            <div >
+                <div class="quizz-title">
+                    <h1>Categorie</h1>
+                    <form>
+                        <div class="form-group" style="width: 600px;">
+                            <select class="form-control"   >
+           
+                                <optgroup label="Categorie">
+                                    <option  *ngFor="let categorie of Categories" >{{categorie.titre}} </option>
+                                    
+                                </optgroup>
+                                
+                              </select>
+                        </div>
+                      </form>
+                   
+                    <a  class="btn btn-primary " data-toggle="modal" data-target="#exampleModal"><i class="fa fa-chevron-circle-right"></i> 
+                                Ajout nouvelle categorie                </a>
+
+                                
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Nouveau Categorie</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+                                          <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Titre:</label>
+                                            <input type="text" class="form-control" id="titre" formControlName="titre" >
+                                          </div>
+                                          
+
+                                        </form>
+                                      </div>
+                                      <div class="modal-footer">
+                                        
+                                        <button type="button" class="btn btn-primary"  style="margin-top: -6px;"  (click)="onSubmit()">Ajout</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>           
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row">
+            
+          <div class="col-md-12">
+              <div >
+                  <div class="quizz-title">
+                      <h1>Test</h1>
+                      <form>
+                          <div class="form-group" style="width: 600px;">
+                              <select class="form-control"   >
+             
+                                  <optgroup label="Test">
+                                      <option  *ngFor="let test of Tests" >{{test.titre}} </option>
+                                      
+                                  </optgroup>
+                                  
+                                </select>
+                          </div>
+                        </form>
+                     
+                      <a  class="btn btn-primary " data-toggle="modal" data-target="#exampleModal1"><i class="fa fa-chevron-circle-right"></i> 
+                                  Ajout nouveau test                </a>
+  
+                                  
+                                  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Nouveau Test</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form [formGroup]="registerFormTest"  (ngSubmit)="onSubmitTest()">
+                                            <div class="form-group">
+                                              <label for="recipient-name" class="col-form-label">Titre:</label>
+                                              <input type="text" class="form-control" id="titre" formControlName="titre" >
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="recipient-name" class="col-form-label">Description:</label>
+                                              <input type="text" class="form-control" id="titre" formControlName="description" >
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="recipient-name" class="col-form-label">Nombre question:</label>
+                                              <input type="text" class="form-control" id="titre" formControlName="nb_questions" >
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="recipient-name" class="col-form-label">Nombre minute:</label>
+                                              <input type="text" class="form-control" id="titre" formControlName="nb_minutes" >
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="recipient-name" class="col-form-label">Score min:</label>
+                                              <input type="text" class="form-control" id="titre" formControlName="score_min" >
+                                            </div>
+
+                                            <label for="recipient-name" class="col-form-label">Categorie</label>
+                                            <select class="form-control"  formControlName="categorie" >
+             
+                                              <optgroup label="Test">
+                                                  <option  *ngFor="let categorie of Categories" value="{{categorie.id}}" [label]="categorie.titre"> </option>
+                                                  
+                                              </optgroup>
+                                              
+                                            </select>
+                                            
+                                            <div class="form-group">
+                                              <label for="recipient-name" class="col-form-label">Code test:</label>
+                                              <input type="text" class="form-control" id="titre" formControlName="code_test" >
+                                            </div>
+  
+                                          </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                          
+                                          <button type="button" class="btn btn-primary"  style="margin-top: -6px;"  (click)="onSubmitTest()">Ajout</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>           
+  
+                  </div>
+              </div>
+          </div>
+          </div>
+
+        <div class="row">
+            
+                <div class="col-md-12">
+                    <div >
+                        <div class="quizz-title">
+                            <h1>Question Reponse</h1>
+                            <form>
+                              <div class="form-group" style="width: 500px;">
+                                  <select class="form-control"   >
+                 
+                                      <optgroup label="Question">
+                                          <option  *ngFor="let question of Questions" >{{question.texte}} </option>
+                                          
+                                      </optgroup>
+                                      
+                                    </select>
+                              </div>
+                            </form>
+                          
+                            
+                            
+                            
+                            <label class="btn btn-default" style="width: 500px;">
+                             
+                              <input type="file" (change)="selectFile($event)"  style="width: 500px; "/>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </label>
+                            <!--<br><br><br><br>-->
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" [disabled]="!selectedFiles" (click)="uploadquestionreponse()"  ><i class="fa fa-chevron-circle-right"></i> 
+                              Ajouter fichier 
+                            </button>
+                            
+                           
+                            <div class="alert alert-light" role="alert" style="color: green;">{{ messagequestionreponse }}</div>
+                           
+                            
+        
+                                        
+                                                  
+        
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+    </div>
+</body>

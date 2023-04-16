@@ -1,0 +1,474 @@
+/*
+@File: Evolta Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+
+*/
+/*================================================
+Default CSS
+=================================================*/
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
+
+
+.navbar-area .navbar .navbar-nav  .nav-link,.navbar-area .navbar .navbar-nav .nav-item  {
+  /*color: #ffac00;*/
+  color:white;
+ 
+  
+}
+
+
+.navbar-area {
+  font-size: 17px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 5000;
+}
+
+
+/*
+.navbar-area1.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  background: black !important;
+  background: black !important;
+  -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+*/
+@media only screen and (max-width: 991px) {
+  .navbar-area {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    padding-top: 1px;
+    padding-bottom: 15px;
+  }
+  .navbar-area1 {
+    top:140px;
+  }
+ 
+
+  .navbar-area.is-sticky {
+    border-bottom: none;
+    -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+}
+
+/*================================================
+Footer Area CSS
+=================================================*/
+.footer-area {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  /*background-color: #182c51;*/
+  background-color: #000000;
+}
+
+.single-footer-widget {
+  margin-bottom: 30px;
+}
+
+.single-footer-widget .logo {
+  margin-bottom: 20px;
+}
+
+.single-footer-widget .logo p {
+  color: #ffffff;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.single-footer-widget p {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.single-footer-widget .social {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .social li {
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.single-footer-widget .social li a {
+  width: 35px;
+  height: 35px;
+  background-color: #333333;
+  line-height: 36px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.single-footer-widget .social li a i::before {
+  font-size: 13px;
+}
+
+.single-footer-widget .social li a:hover {
+  background-color: #ffac00;
+  color: #ffffff;
+}
+
+.single-footer-widget h3 {
+  margin-bottom: 23px;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 6px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.single-footer-widget h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #ffac00;
+}
+
+.single-footer-widget .footer-services-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .footer-services-list li {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.single-footer-widget .footer-services-list li a {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.single-footer-widget .footer-services-list li a:hover {
+  color: #ffac00;
+}
+
+.single-footer-widget .footer-services-list li:last-child {
+  margin-bottom: 0;
+}
+
+.single-footer-widget .quick-links-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .quick-links-list li {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.single-footer-widget .quick-links-list li a {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.single-footer-widget .quick-links-list li a:hover {
+  color: #ffac00;
+}
+
+.single-footer-widget .quick-links-list li:last-child {
+  margin-bottom: 0;
+}
+
+.single-footer-widget .footer-contact-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.single-footer-widget .footer-contact-list li {
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.single-footer-widget .footer-contact-list li a {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.single-footer-widget .footer-contact-list li a:hover {
+  color: #ffac00;
+}
+
+.single-footer-widget .footer-contact-list li span {
+  font-weight: 700;
+}
+
+.single-footer-widget .footer-contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.copyright-area {
+  /*background-color: #0d1d3b;*/
+  background-color:#000000;
+  margin-top: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.copyright-area p {
+  color: #ffffff;
+}
+
+.copyright-area p a {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.copyright-area p a:hover {
+  color: #ffac00;
+}
+
+.copyright-area ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  text-align: right;
+}
+
+.copyright-area ul li {
+  display: inline-block;
+  margin-left: 15px;
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: initial;
+}
+
+.copyright-area ul li a {
+  color: #ffffff;
+}
+
+.copyright-area ul li a:hover {
+  color: #ffac00;
+}
+
+.copyright-area ul li::before {
+  content: '';
+  width: 4px;
+  height: 1px;
+  background: #ffffff;
+  left: -11px;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.copyright-area ul li:first-child {
+  margin-left: 0;
+}
+
+.copyright-area ul li:first-child::before {
+  display: none;
+}
+
+.circle-map {
+  position: absolute;
+  top: 20%;
+  right: 18%;
+  z-index: -1;
+}
+
+/*================================================
+Go Top CSS
+=================================================*/
+.go-top {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  right: 15px;
+  color: #ffffff;
+  background-color: #0ca59d;
+  z-index: 4;
+  width: 40px;
+  text-align: center;
+  height: 42px;
+  line-height: 42px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .9s;
+  transition: .9s;
+}
+
+.go-top.active {
+  top: 98%;
+  -webkit-transform: translateY(-98%);
+          transform: translateY(-98%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.go-top i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.go-top i:last-child {
+  opacity: 0;
+  visibility: hidden;
+  top: 60%;
+}
+
+.go-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #ffac00;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.go-top:hover, .go-top:focus {
+  color: #ffffff;
+}
+
+.go-top:hover::before, .go-top:focus::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.go-top:hover i:first-child, .go-top:focus i:first-child {
+  opacity: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.go-top:hover i:last-child, .go-top:focus i:last-child {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
+
+
+
+
+
+
+
+.dropbtn { 
+  background-color: #d37e0f; 
+  color: white; 
+  padding: 16px; 
+  font-size: 16px; 
+  border: none; 
+  cursor: pointer; 
+  z-index: auto;
+} 
+
+.dropdown { 
+  position: absolute; 
+  top:25%;
+  left:90%;
+  display: block; 
+} 
+
+.dropdown-content { 
+  display: none; 
+  position: absolute; 
+  background-color: #f9f9f9; 
+  min-width: 160px; 
+  box-shadow: 0px 8px 16px  
+      0px rgba(0, 0, 0, 0.2); 
+} 
+
+.dropdown-content a { 
+  color: black; 
+  padding: 12px 16px; 
+  text-decoration: none; 
+  display: block; 
+} 
+
+.dropdown-content a:hover { 
+  background-color: #f1f1f1 
+} 
+
+.dropdown:hover .dropdown-content { 
+  display: block; 
+} 
+
+.dropdown:hover .dropbtn { 
+  background-color: #e0af0c; 
+} 
+@media screen and (max-width:968px) {
+  
+  .dropdown { 
+    position: relative; 
+    left:0%;
+    margin-top:10px;
+    display: inline-block; 
+  } 
+  
+ 
+}
+
+.smart-scroll{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1020;
+}
+.scrolled-down{
+   transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+   transform:translateY(0); transition: all 0.3s ease-in-out;
+}

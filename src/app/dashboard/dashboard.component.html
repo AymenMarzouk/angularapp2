@@ -1,0 +1,199 @@
+
+ 
+<div class="s-layout ">
+
+    <!-- Sidebar -->
+    <div class="s-layout__sidebar">
+      <a class="s-sidebar__trigger" href="#0">
+         <i class="fa fa-bars"></i>
+      </a>
+    
+      <nav class="s-sidebar__nav">
+         <ul>
+            <li>
+              <a class="s-sidebar__nav-link"  routerLink="/test/categorie">
+                 <i class="fa fa-list-alt"></i><em>Quiz</em>
+              </a>
+           </li>
+            <li>
+               <a class="s-sidebar__nav-link"  routerLink="/test/login">
+                 <i class="fa fa-home"></i><em>Home</em>
+               </a>
+            </li>
+            <li>
+               <a class="s-sidebar__nav-link" routerLink="/test/profile">
+                  <i class="fa fa-user"></i><em>Profile</em>
+               </a>
+            </li>
+         </ul>
+      </nav>
+    </div>
+    
+    <!-- Content -->
+    <main class="s-layout__content ">
+      
+      <div class="container mt-5">
+        <div *ngFor="let user of Utilisateur" cass="col-md-4"> 
+       <h2 style="text-align: center;color: #ff4800">Welcome {{user.firstname}}&nbsp;{{user.lastname}}</h2>
+        </div>
+                <div class="row">
+                <div class="col-md-3">
+                  <div class="card-counter primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="count-numbers">12</span>
+                    <span class="count-name">Tests</span>
+                  </div>
+                </div>
+            
+                <div class="col-md-3">
+                  <div class="card-counter danger">
+                    <i class="fa fa-star"></i>
+                    <span class="count-numbers">599</span>
+                    <span class="count-name">Scores</span>
+                  </div>
+                </div>
+            
+                <div class="col-md-3">
+                  <div class="card-counter success">
+                    <i class="fa fa-database"></i>
+                    <span class="count-numbers">6875</span>
+                    <span class="count-name">Data</span>
+                  </div>
+                </div>
+            
+                <div class="col-md-3">
+                  <div class="card-counter info">
+                    <i class="fa fa-users"></i>
+                    <span class="count-numbers">35</span>
+                    <span class="count-name">Users</span>
+                  </div>
+                </div>
+              </div>
+             
+              
+        
+           
+        
+         <div class="row mb-5">
+             <div class="col-md-6 mt-3">
+               <div class="bg-white p-3 rounded border">
+                <div *ngIf="chart">
+                    <canvas id="canvas" >{{ chart }}</canvas>
+                  </div>
+                </div>
+                
+             </div>
+             <div class="col-md-6 mt-3">
+               <div class="bg-white p-3 rounded border">
+                <div *ngIf="chart">
+                    <canvas id="canvas1">{{ chart1 }}</canvas>
+                  </div>
+                  
+                  
+                </div>
+             </div>
+             <div class="col-md-6 mt-3">
+                 <div class="bg-white p-3 rounded border">
+                  <div *ngIf="chart">
+                    <canvas id="canvas2" >{{ chart2 }}</canvas>
+                  </div>
+                    
+                 </div>
+             </div>
+             <div class="col-md-6 mt-3">
+                 <div class="bg-white p-3 rounded border">
+                  <div *ngIf="chart">
+                    <canvas id="canvas3" >{{ chart3 }}</canvas>
+                  </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="row mb-5">
+         <div class="col-md-6 mt-3">
+         <div class="bg-white p-3 rounded border">
+         <div class="container">
+          <br> <b> <p style="float: left; margin-top: -30px;">Quiz
+           </p></b>
+           <b> 
+            <div *ngFor="let user of Utilisateur"  >
+             <a style="float: right; margin-top: -30px;" (click)="gettestsbyiduser1(user.id)">Details
+           </a></div>
+          </b>
+            <table class="table table-hover shopping-cart-wrap col-md-3">
+        
+              <div *ngFor="let testuser of Utilisateur_Tests"  >
+              <tbody >
+              <tr>  
+                <td>
+
+                  <figure class="media"  >
+                    <div class="img-wrap"></div>
+                    <figcaption class="media-body" >
+                      <h6 class="title text-truncate" style="padding: 10px; margin: 10px;">{{testuser.test.titre}}</h6>
+                      <br>
+                      <dl class="param param-inline small">
+                        <dt>
+                          <img src="/assets/images/time.png" alt="image" style="height: 30px;"> {{testuser.test.nb_minutes}}  Minutes &nbsp;&nbsp;
+                        </dt>
+                        <dd>  
+                          <img src="/assets/images/quiz.png" alt="image" style="height: 30px;">{{testuser.test.nb_questions}} Questions 
+                        </dd>
+                      </dl>
+                    </figcaption>
+                  </figure>
+                </td>
+                <td>
+                  <div class="price-wrap" style="padding: 10px; margin: 10px;"> 
+                    <var class="price">SCORE</var> 
+                    <h4 style="text-align: center; color:#40c4e6;">{{testuser.score}} %</h4> 
+                  </div>
+                </td>
+              </tr>
+            
+              </tbody>
+              </div>
+          </table>
+          </div>
+          </div>
+          </div>
+         
+         
+          
+
+
+             <div class="col-md-6 mt-3">
+              <div class="bg-white p-3 rounded border">
+            <div class="page-content page-container" id="page-content">
+              <div class="padding">
+                 
+                      
+                          <div class="card">
+                              <div class="card-body little-profile text-center">
+                                  <div class="pro-img m-t-20"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1558171376/alexandru-zdrobau-98438-unsplash_1.jpg" alt="user"></div>
+                                  <div *ngFor="let user of Utilisateur" cass="col-md-4"> 
+                                  <h3 class="m-b-0">{{user.firstname}}&nbsp;{{user.lastname}}</h3>
+                                  <h6 class="text-muted">Web Developer</h6>
+                                  </div>
+                              </div>
+                              
+                              <div class="card-body text-center"> <a href="javascript:void(0)" class="m-t-10 m-b-20 waves-effect waves-dark btn btn-success btn-md btn-rounded" data-abc="true">Edit Profile</a> </div>
+                          </div>
+                      
+                 
+              </div>
+          </div>
+          </div>
+          </div>
+
+            </div>
+            
+
+            
+
+         
+
+     </div>
+
+    </main>
+    </div>

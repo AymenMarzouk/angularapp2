@@ -1,0 +1,55 @@
+
+	<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+    <div class="container2">
+        <div class="page-title-content">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>Tests</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+<!-- End Page Title Area -->
+<body>
+	<div *ngFor="let test of Tests" >
+	<div class="movie_card" id="bright">
+	
+	  <div class="info_section">
+		
+		<div class="movie_header">
+		  
+		  <h4>{{test.titre}}</h4>
+	   
+		</div>
+		<div class="movie_desc">
+		  <p class="text">
+			{{test.description}}
+		  </p>
+		</div>
+		<div class="movie_social">
+		  <ul>
+			<li><img src="/assets/images/time.png" alt="image">  {{test.nb_minutes}} Minutes</li>
+			<li><img src="/assets/img/quiz.png" alt="image"> {{test.nb_questions}} Questions</li>
+	
+		 
+		  </ul>
+		  <ul>
+			<button  (click)="getquestionsbyidtest(test.id)" class="btn btn-lg">
+				<span >Passer le Test</span>
+			  </button>
+			  <button (click)="getidtest(test.id)"   class="btn btn-lg" >
+				<span >Découvrez-en Plus</span>
+			  </button>
+		 
+		  </ul>
+		</div>
+	  </div>
+	  <div class="blur_back bright_back">
+		
+	  </div>
+	  
+	</div>
+	</div>
+	</body>

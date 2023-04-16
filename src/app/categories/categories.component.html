@@ -1,0 +1,128 @@
+<!-- Start Main Banner Area -->
+<div class="main-banner">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container-fluid">
+                <div class="main-banner-content">
+                    <h1>Mettez-vous au défi avec nos quiz techniques</h1>
+                    <p>Choisissez parmi +100 tests techniques et faites-vous remarquer. Valorisez vos compétences dès maintenant et obtenez un certificat !</p>
+
+                    <div class="btn-box">
+                        <a href="#" class="btn btn-primary">En savoir plus</a>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Banner Area -->
+
+<!-- Start Featured Services Area -->
+<div class="featured-services-area">
+    <div class="container">
+        <div class="featured-services-inner">
+            <div class="row m-0">
+                <div *ngFor="let categorie of Categories"   class="col-md-4 p-0"> 
+                <div class="col-lg-12 col-md-6 col-sm-6 p-0">
+
+                    
+                    <div class="single-featured-services-box">
+                        <div class="icon">
+                            <i class="flaticon-robot"> <h3 class="testnumber1" style="float: right;">{{categorie.total_test}} Tests</h3></i>
+                            
+                        </div>
+                        <h3 >{{categorie.titre}}</h3>
+                       
+                        <br>
+                        <div class="btn-box">
+                        <button  (click)="gettestsbyidcategorie(categorie.id)" class="btn btn-primary" >Voir les Tests</button>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Featured Services Area -->
+
+
+<!-- Start About Area -->
+<section class="about-area ptb-110">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <h2>Rester up-to-date et passez au niveau suivant</h2>
+                    <p>Rejoindre la communauté CloudiaSys, c’est avant tout l’opportunité de valoriser vos compétences techniques via l’un de nos <strong style="color: #ff4800;"> 700 tests </strong>sur les technos les plus demandées.
+                        Faites-vous également connaître de nos clients et de vos pairs en participant à nos hackathons en ligne.
+                    </p>
+                    
+                    <p> Besoin d’une formation sur une techno précise ? Nos meetups sont là pour ça ! C’est vous qui décidez des sujets.</p>
+                    
+                    <p>  Boostez votre carrière de développeur avec nous, que ce soit en tant que freelance ou salarié, pourquoi pas également en devenant freelance « franchisé » CloudiaSys ou en travaillant pour l’un des clients de la plateforme Pentalog : 1er partenaire tech des éditeurs de logiciels.</p>
+                       <a href="#" class="btn btn-primary">Discover More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12">
+                <div class="about-image">
+                    
+                      <!-- Card content -->
+                        <div class="card-body d-flex">
+                            <img src="https://decisionkeysit.com/assets/img/exam.svg" class="rounded-circle mr-3  icone"    alt="avatar">
+                            <div>
+                           
+                            <p class="card-text"><strong>+700 tests</strong> pour certifier vos compétences tech</p>
+                            </div>
+                        </div>
+                      <!-- Card -->
+                     <!-- Card content -->
+                     <div class="card-body d-flex ">
+                        <img src="https://decisionkeysit.com/assets/img/conversation.svg" class="rounded-circle mr-3 icone"  alt="avatar">
+                        <div>
+                            <p class="card-text"><strong>Meetups</strong> créés selon vos besoins</p>
+                        </div>
+                    </div>
+                  <!-- Card -->
+                   <!-- Card content -->
+                   <div class="card-body d-flex ">
+                    <img src="https://decisionkeysit.com/assets/img/medal.svg" class="rounded-circle mr-3 icone"  alt="avatar">
+                    <div>
+                        <p class="card-text"><strong>Opportunités multiples</strong> via la plateforme CloudiaSys</p>
+                    </div>
+                </div>
+              <!-- Card -->
+               <!-- Card content -->
+               <div class="card-body d-flex ">
+                <img src="https://decisionkeysit.com/assets/img/expertise.svg" class="rounded-circle mr-3 icone"  alt="avatar">
+                <div>
+                    <p class="card-text"><strong>CTO expérimenté</strong> pour jouer le rôle d’agent dans votre projet </p>
+                </div>
+               </div>
+          <!-- Card -->
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape-img1"><img src="https://decisionkeysit.com/assets/img/shape/1.png" alt="image"></div>
+    <div class="shape-img2"><img src="https://decisionkeysit.com/assets/img/shape/2.svg" alt="image"></div>
+    <div class="shape-img3"><img src="https://decisionkeysit.com/assets/img/shape/3.png" alt="image"></div>
+    <div class="shape-img4"><img src="https://decisionkeysit.com/assets/img/shape/4.svg" alt="image"></div>
+    <div class="shape-img5"><img src="https://decisionkeysit.com/assets/img/shape/5.svg" alt="image"></div>
+    <div class="shape-img6"><img src="https://decisionkeysit.com/assets/img/shape/6.png" alt="image"></div>
+    <div class="dot-shape1"><img src="https://decisionkeysit.com/assets/img/shape/dot1.png" alt="image"></div>
+    <div class="dot-shape2"><img src="https://decisionkeysit.com/assets/img/shape/dot3.png" alt="image"></div>
+</section>
+<!-- End About Area -->
+
+
+<!-- Card -->

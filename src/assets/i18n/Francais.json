@@ -1,0 +1,139 @@
+{
+    "HOME" :{
+        "TITLE":"Bonjour Angular avec ngx translate fr",
+        "TEXT":"cette demo a ete cree avec ngx translate"
+     
+    },
+    "menu1":{
+        "item1":"Acceuil",
+       "item2":"Services",
+       "item3":"Formations",
+       "item4":"Carrière",
+       "item5":" A propos",
+       "item6":" Contact",
+       "item7":" Test"
+ 
+ },
+
+ "menu2":{
+    "item1":"Developpeur",
+   "item2":"Entreprise"
+},
+
+"acceuil":{
+    "h1":"Faire fonctionner les données à votre façon",
+   "p":"Nos solutions allient efficience et simplicité pour atteindre les objectifs de compétitivité et de croissance des petites et grandes entreprises.",
+   "solutions1":"Science des données",
+   "solutions2":"Nous vous aidons à exploiter les données de votre entreprise pour comprendre le passé et anticiper le futur en vous recommandant des solutions Data ",
+   "solutions3":"Apprentissage automatique",
+   "solutions4":"Nous vous accompagnons dans le développement des modeles statistiques machine learning afin de valoriser vos données et d'en extraire des insights.",
+   "solutions5":"Analyse et visualisation des données",
+   "solutions6":"A l'aide des solutions phares du marché : Power Bi, Tableau Software, Qlik Sense, nos consultants vous aident à rendre la donnée accessible à tous les utilisateurs.",
+   "mission1":"Notre mission",
+   "mission2":"S2AD Tech déploie une gamme d’offres d’expertises pensées pour répondre aux enjeux majeurs des entreprises et accompagner leurs projets de transformation IT. ",
+   "mission3":"Nos offres allient efficience et simplicité pour atteindre les objectifs de compétitivité et de croissance des petites et grandes entreprises.",
+   "service1":"Notre expertise",
+   "service2":"L’équipe est structurée en 3 pôles d’expertise : conseil en Data Science,Machine Learning et Business Intelligence. ",
+   "service3":"Data Science",
+   "service4":"Nous vous aidons à exploiter les données de votre entreprise pour comprendre le passé, anticiper le futur et vous recommander des solutions pour l’avenir.",
+   "service5":" Notre équipe déploient des modèles statistiques pour répondre à vos questions, telles que : anticiper les volumes de ventes..",
+   "service6":"Machine Learning",
+   "service7":"Nous vous accompagnons dans le développement des modeles statistiques machine learning afin de valoriser vos données et d'en extraire des insights.",
+   "service8":"Business Intelligence",
+   "service9":"Nos collaborateurs vous aident à trouver la meilleure façon de collecter, stocker et structurer vos données en fonction de votre stratégie. Nous proposons un accompagnement de conseil et d’expertise technique adapté à votre transformation et votre degré d’avancement.",
+   "service10":"Data Analytics",
+   "service11":"Appréhender les données massives multi-structurées, c’est savoir collecter, décrypter, traiter les Big Data pour activer les leviers de croissance et de performance des entreprises, quels que soient leur taille ou leur secteur économique.",
+   "service12":"Data Virtualisation",
+   "service13":"S2AD Tech vous accompagne dans la mise en place de vos projets de data visualisation. Maitrisant l’ensemble des solutions phares du marché : Power Bi, Tableau Software, Qlik Sense, nos consultants vous aident à rendre les données accessibles à tous les utilisateurs.",
+   "service14":"Data Architecture",
+   "service15":"Nous mettons en place des architectures de données hybrides (on premises et dans le Cloud) en utilisant des technologies DATA phares du marché.",
+   "formation1":"Nos formations",
+   "formation2":"Nous proposons des formations en présentielles et à distance aux petites et grandes entreprises .",
+   "formation3":"Implémenter une Plateforme de Données",
+   "formation4":"avec Microsoft Azure",
+   "formation5":"Analyse et Visualisation des Données",
+   "formation6":"avec Power BI"
+
+},
+
+"formation":{
+    "formation1":"nos formateurs certifiés microsoft (MCT) vous ferront profiter",
+    "formation2":"afin de satisfaire les besoins de vos collaborateurs.",
+    "formation3":"Trouver votre formation",
+    "formation4":"Acceuil",
+    "formation5":"Microsoft Azure",
+    "formation6":"Cette formation a pour but d’acquérir les connaissances nécessaires permettant aux participants d’avoir une bonne compréhension de l’offre et des technologies de Data disponibles sur le cloud Microsoft Azure.Elle permet de former de Ingénieurs de données (Data Engineers) opérationnels sur la plateforme Azure.",
+    "formation7":"Power BI",
+    "formation8":"Cette formation a pour but d’acquérir les connaissances nécessaires permettant aux participants d’avoir une bonne compréhension de l’analyse et la visualisation de données en utilisant l’outil Power BI.",
+    "formation9":"Les objectifs de la formation ",
+    "formation10":"Concevoir, développer et explorer les données via des rapports et des tableaux de bord Power BI, On-premises et dans le Cloud.",
+    "formation11":" Le public visé par la formation",
+    "formation12":"Les prérequis ",
+    "formation13":"Formation "
+    
+},
+
+"carriere":{
+    "carriere1":"Work@S2AD Tech",
+    "carriere2":"On recrute chaque année des collaborateurs Juniors et confirmés dans les domaines de l’Infrastructure réseaux, sécurité, stockage et Cloud. ",
+    "carriere3":"L’expérience de nos consultants et l’enthousiasme des jeunes diplômés sont les qualitées qui permettent la création d’une relation de confiance avec nos clients.",
+    "carriere4":"Why Work at S2AD Tech ?",
+    "carriere5":"Innovation",
+    "carriere6":"Experience",
+    "carriere7":"Notre objectif est d’encourager chaque collaborateur à être force de proposition et à prendre des initiatives pour développer des projets toujours plus innovants.",
+    "carriere8":"Integrity",
+    "carriere9":"Transparent culture",
+    "carriere10":"Notre ligne de conduite : un esprit d’entraide et de collaboration permanent en assurant aux collaborateurs une intervention sur des projets stimulants et novateurs. ",
+    "carriere11":"Career Roadmap",
+    "carriere12":"nous nous engageons à former et faire monter en compétences l’ensemble de nos collaborateurs et ce, sur chaque technologie émergente liée aux diverses infrastructures  ",
+    "carriere13":"Carriéres "
+
+},
+
+"propos":{
+    "propos1": "A propos",
+    "propos2": "Nous fournissons des solutions basées sur les données",
+    "propos3": "S2AD Tech déploie une gamme d’offres d’expertises pensées pour répondre aux enjeux majeurs des entreprises et accompagner leurs projets de transformation IT.  ",
+    "propos4": "Nos offres allient efficience et simplicité pour atteindre les objectifs de compétitivité et de croissance des petites et grandes entreprises. ",
+    "propos5": "Notre vision",
+    "propos6": " Vous accompagner dans l’analyse et la valorisation de vos données afin de vous aider lors de votre prise de décision.",
+    "propos7": "Notre mission",
+    "propos8": "Vous aider à gagner en performance et en rentabilité à travers l’analyse et la valorisation de la Data. ",
+    "propos9": "Qui sommes-nous ?",
+    "propos10": "Une équipe composée de spécialistes passionnés par le Cloud, Database et Data visualisation."
+    
+
+},
+
+"contact":{
+    "contact1":"Contactez nous",
+    "contact2":"Nom",
+    "contact3":"Email",
+    "contact4":"Telephone",
+    "contact5":"Sujet",
+    "contact6":"Votre Message",
+    "contact7":"Envoyer Message"
+   
+  
+},
+"test":{
+    "login":"Se connecter",
+    "login1":"Email",
+    "login2":"Mot de passe",
+    "login3":"S'identifier",
+    "login4":"S'inscrire",
+    "login5":"Mot de passe oublie?",
+    "login6":"Nom",
+    "login7":"Prenom"
+    
+}
+
+
+
+    
+
+
+
+
+
+    }

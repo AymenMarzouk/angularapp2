@@ -1,0 +1,266 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+  }
+  
+a {
+    display: block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  a:hover, a:focus {
+    text-decoration: none;
+    /*color: #0ca59d;*/
+    color:#fca608;
+  
+  }
+  
+  button {
+    outline: 0 !important;
+  }
+  
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+    font-family: "Dosis", sans-serif;
+  }
+  
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+p {
+  font-size: 14px;
+  color: #57647c;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.ptb-110 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.bg-f7f9fc {
+  background-color: #f7f9fc;
+}
+.bg-fafafa { 
+  background-color: #fafafa;
+}
+
+img {
+  max-width: 100%;
+}
+/*================================================
+Page Title Area CSS
+=================================================*/
+.page-title-area {
+    position: relative;
+    z-index: 1;
+    padding-top: 210px;
+    padding-bottom: 130px;
+    background-color: #ec7905;
+    background-image: url('../../assets/img/page-title-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .page-title-area .shape3 {
+    -webkit-animation-name: rotateme;
+            animation-name: rotateme;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  
+  .page-title-content {
+    text-align: center;
+  }
+  
+  .page-title-content h2 {
+    margin-bottom: 0;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .page-title-content ul {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding-left: 0;
+    list-style-type: none;
+    font-family: "Dosis", sans-serif;
+    margin-bottom: 0;
+  }
+  
+  .page-title-content ul li {
+    display: inline-block;
+    color: #ffffff;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .page-title-content ul li a {
+    color: #ffac00;
+  }
+  
+  .page-title-content ul li a:hover {
+    color: #ffac00;
+  }
+  
+  .page-title-content ul li::before {
+    content: "\f054";
+    position: absolute;
+    right: -15px;
+    top: 6px;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-size: 10px;
+  }
+  
+  .page-title-content ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .page-title-content ul li:last-child::before {
+    display: none;
+  }
+  
+  .page-title-content ul li:first-child {
+    margin-left: 0;
+  }
+  .services-area {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 80px;
+  }
+  
+  .services-area .pagination-area {
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  
+  .single-services-box {
+    margin-bottom: 30px;
+    padding: 30px 25px;
+    background-color: #ffffff;
+    text-align: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-services-box img {
+    display: inline-block;
+    margin-bottom: 18px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .single-services-box h3 {
+    margin-bottom: 0;
+    font-size: 23px;
+    font-weight: 700;
+  }
+  
+  .single-services-box p {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+  
+  .single-services-box:hover {
+    -webkit-box-shadow: 2px 1px 25px 5px rgba(166, 166, 166, 0.2);
+            box-shadow: 2px 1px 25px 5px rgba(166, 166, 166, 0.2);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  
+  .single-services-box:hover img {
+    -webkit-animation: swing 1s ease;
+            animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  
+  @-webkit-keyframes swing {
+    15% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    30% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    50% {
+      -webkit-transform: translateX(6px);
+              transform: translateX(6px);
+    }
+    65% {
+      -webkit-transform: translateX(-6px);
+              transform: translateX(-6px);
+    }
+    80% {
+      -webkit-transform: translateX(4px);
+              transform: translateX(4px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  
+  @keyframes swing {
+    15% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    30% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    50% {
+      -webkit-transform: translateX(6px);
+              transform: translateX(6px);
+    }
+    65% {
+      -webkit-transform: translateX(-6px);
+              transform: translateX(-6px);
+    }
+    80% {
+      -webkit-transform: translateX(4px);
+              transform: translateX(4px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  
+  .services-shape {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: -1;
+  }

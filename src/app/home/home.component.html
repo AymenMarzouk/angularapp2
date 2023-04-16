@@ -1,0 +1,54 @@
+<!-- Start Page Title Area -->
+<!-- <div class="main-banner">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container-fluid">
+                    <div class="main-banner-content">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+<!-- End Page Title Area -->
+
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>Tests</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Area -->
+<!--Start Page Login Form-->
+<h2>Bonjour {{Utilisateur[0].firstname}} {{Utilisateur[0].lastname}}</h2>
+<section class="services-area bg-f2f6f9 ptb-110">
+    <div class="container">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search this user">
+            <div class="input-group-append">
+                <button class="btn btn-secondary" style=" color: orangered" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <div class="col-md-4 card categories-card single-services-box">
+                <button (click)="gettestsbyiduser(Utilisateur[0].id)" class="btn btn-secondary ">Voir les Historiques du
+                    tests</button>
+            </div>
+            <!--<div class="col-md-4 card categories-card single-services-box">
+            <button style="float:right" (click)="gettestsbyiduser1(Utilisateur[0].id,0)" class="btn btn-secondary ">Voir votre score du tests</button>
+           </div> -->
+        </div>
+    </div>
+</section>
+
+<!--End Page Login Form-->

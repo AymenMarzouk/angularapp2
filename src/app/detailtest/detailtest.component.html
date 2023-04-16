@@ -1,0 +1,121 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>Tests</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+<!-- End Page Title Area -->
+
+
+
+<body>
+
+    <div class="container main-content">
+        
+                <div class="quizz-title">
+                    <h1>{{test.titre}}</h1>
+                    <button (click)="getquestionsbyidtest(test.id)" class="btn btn-primary rounded"> 
+                                PASSER LE TEST                </button>
+
+                    <br><br><br>
+                    <div class="quizz-content">
+                    <div class="quizz-left">
+                        <div class="quizz-description">
+                            <h2> Description du test </h2>
+                            <p>
+                            </p><p>{{test.description}}</p>
+                            
+                                            </div>
+                    </div>
+                    <div class="quizz-right">
+                        <aside id="quizz-sidebar">
+                            <div class="quizz-details">
+                                <div  >
+                                <div class="info-cards">
+                                    <div class="info-card">
+                                        <div class="info-type">
+                                            <i class="fa fa-question"></i>
+                                            <span>QUESTIONS</span> 
+                                        </div>
+                                        <div class="info-value">
+                                            <h4>{{test.nb_questions}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="info-card">
+                                        <div class="info-type">
+                                            <i class="fa fa-clock"></i>
+                                            <span>MINUTES</span> 
+                                        </div>
+                                        <div class="info-value">
+                                            <h4> {{test.nb_minutes}} </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+                               
+                            </div>
+    
+                            
+                                
+                                                </aside>
+                    </div>
+                    
+                    
+                    
+                    <div class="related-tests">
+                        <h3>Tests par Categorie</h3>
+                        
+                        <div class="row list-quizzes-related" >
+                          
+                                    <article class="related-article" *ngFor = "let testbycat of tests ">
+                                                                
+                                        <a (click)="getidtest(test.categorie.id)">
+                                            <div class="main-info">
+                                                
+                                                <h4>{{testbycat.titre}}</h4>
+                                                <div class="quizz-level">
+                                                    <small>
+                                                        Categorie: {{testbycat.categorie.titre}}                                        </small>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="article-meta">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <time datetime=""><i class="fa fa-clock"></i>
+                                                            {{testbycat.nb_minutes}} minutes                                                    </time>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="questions-count">
+                                                            <i class="fa fa-question-circle"></i> 
+                                                            {{testbycat.nb_questions}} questions     
+                                                             
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                 
+                                    </article>
+    
+                                
+    
+                                                    </div>
+                        
+                    </div>
+               
+                </div>
+                </div>
+    
+    
+           
+       
+        </div>
+
+    </body>

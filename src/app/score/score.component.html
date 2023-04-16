@@ -1,0 +1,85 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>Tests</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+<!-- End Page Title Area -->
+
+<section class="services-area bg-f2f6f9 ptb-110">
+	<div class="section-title">
+	</div>
+    <nav class="nav">
+        <button (click)="retouracceuil()" class="nav-link">Retour à l'acceuil</button>
+        <button *ngIf="voirtest" (click)="voirtouslestests(Utilisateur_Tests[0].utilisateur.id,0)" class="nav-link">Voir tous les tests</button>
+      </nav>
+	
+	<br>
+<div class="social-box">
+    <div class="container">
+     	<div class="row">
+			<div *ngFor="let testuser of Utilisateur_Tests  " class="col-lg-8  mx-auto">
+                
+                
+					<div class="box">
+						
+						<div class="box-title">
+                            <img src="/assets/images/score3.png" alt="image" style="height: 120px;padding: 10px;">
+                            <h3>votre score est : &nbsp;{{testuser.score}} %</h3> 
+                            <div *ngIf ="testuser.flagechecsucces== 1 "><h3><label style="float: right; color: green;">Success <img src="/assets/images/succes.png" alt="image" style="height: 60px;padding: 10px;"></label> </h3></div>
+                           
+                            <div *ngIf ="testuser.flagechecsucces== 0 "><h3><label style="float: right; color: red;">Failed<img src="/assets/images/failed.png" alt="image" style="height: 60px;padding: 10px;"></label> </h3></div>
+
+                        </div>
+                        <br><br><br> 
+                        <h6> Pour le : &nbsp;{{testuser.test.titre}}</h6>
+                        <div class="d-flex align-items-center justify-content-between mt-1" >
+                            <h3 class="font-weight-bold my-2"> 
+                            
+                            <img src="/assets/images/question.png" alt="image" style="height: 80px;padding: 10px;">{{testuser.test.nb_questions}} Questions
+                            <img src="/assets/images/time.png" alt="image" style="height: 60px;padding: 10;">{{testuser.test.nb_minutes}} Minutes	
+                            
+                            </h3>
+                          </div>
+                          <br>
+                          <h6> Numero d'essai : &nbsp;<label class="nombre" >{{testuser.num_essai}}</label></h6>
+						
+
+					
+				
+            <div >
+                
+                <div class="box-title">
+                    <br>
+                   
+                        <h6>Réponses correctes :  &nbsp;<label class="nombre" >{{testuser.nb_reponses_correctes}}</label></h6>
+                        <br>
+                        <h6>Réponses incorrectes: &nbsp;<label class="nombre" >{{testuser.nb_reponse_incorrectes}}</label></h6>
+                        <br>
+                        <h6>Questions répondues: &nbsp;<label class="nombre" >{{testuser.nb_questions_repondues}}</label></h6>
+                        <br>
+                        <h6>Questions non répondues: &nbsp;<label class="nombre" >{{testuser.nb_questions_non_repondues}}</label></h6>
+                </div>
+                 
+                    
+                   
+                
+                 
+            </div>
+					 
+        </div>
+					 
+    </div>
+				
+		
+ 	
+</div>
+</div>
+</div>
+</section>

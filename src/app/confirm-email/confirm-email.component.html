@@ -1,0 +1,59 @@
+
+    <!-- Start Page Title Area -->
+    <div class="main-banner">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container-fluid">
+                    <div class="main-banner-content">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+   <!--Start Page Register Form-->
+    <body>   
+    <div class="container" >
+        <div class="d-flex justify-content-center h-100">
+            <div class="card" >
+                <div class="card-body">
+                    <h3 style="color:white">An Email was sent to you with a verification code, please paste it here </h3><br>
+                    <form  [formGroup]="confirmForm" (ngSubmit)="onSubmit()" >
+                        
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="text" formControlName="code" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.code.errors }"  placeholder="Code">
+                            <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+                                <div *ngIf="" >Wrong verification code !</div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Confirm"  class="btn login_btn">
+                           
+                            
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="card-footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    
+
+
+
+
+
+    </body>
+   <!--End Page Register Form-->
+
+ 

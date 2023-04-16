@@ -1,0 +1,129 @@
+{
+"HOME" :{
+    "TITLE":"Hello Angular with ngx translate",
+    "TEXT":"this demo has been created using ngx translate"
+   
+},
+"menu1":{
+       "item1":"Home",
+       "item2":"Services",
+       "item3":"Training",
+       "item4":"Careers",
+       "item5":" About",
+       "item6":" Contact",
+       "item7":" Test"
+
+},
+"menu2":{
+    "item1":"Developper",
+   "item2":"Company"
+},
+
+"acceuil":{
+    "h1":"Make data work your way",
+   "p":"Our solutions combine efficiency and simplicity to achieve the competitiveness and growth objectives of small and large companies.",
+   "solutions1" :"Data science",
+   "solutions2" :"We help you use your business data to understand the past and anticipate the future by recommending Data solutions",
+   "solutions3" :"Machine learning",
+   "solutions4" :"We support you in the development of machine learning statistical models in order to enhance your data and extract insights.",
+   "solutions5" :"Data Analytics & Visualisation",
+   "solutions6" :"Using leading market solutions: Power Bi, Tableau Software, Qlik Sense, our consultants advise you to make the data accessible to all users.",
+   "mission1":"Our mission",
+   "mission2":"S2AD Tech deploys a range of expertises designed to meet the major challenges of companies and support their IT transformation projects. ",
+   "mission3":"Our offers combine efficiency and simplicity to achieve the competitiveness and growth objectives of small and large companies.",
+   "service1":"Our expertise",
+   "service2":"The team is structured into 3 areas of expertise: consulting in Data Science, Machine Learning and Business Intelligence. ",
+   "service3":"Data Science",
+   "service4":"We help you leverage your business data to understand the past, anticipate the future, and recommend solutions for the future.",
+   "service5":" Our team deploy statistical models to answer your questions, such as: anticipating sales volumes.",
+   "service6":"Machine Learning",
+   "service7":"We support you in the development of machine learning statistical models in order to enhance your data and extract insights.",
+   "service8":"Business Intelligence",
+   "service9":"Our collaborators help you find the best way to collect, store and structure your data according to your strategy. We offer support, advice and technical expertise tailored to your transformation and your degree of advancement.",
+   "service10":"Data Analytics",
+   "service11":"Understanding big multi-structured data means knowing how to collect, decipher and process Big Data to activate growth and performance levers for companies, whatever their size or economic sector.",
+   "service12":"Data Virtualisation",
+   "service13":"S2AD Tech supports you in setting up your data visualization projects. Mastering all the leading solutions on the market: Power Bi, Tableau Software, Qlik Sense, our consultants help you make data accessible to all users.",
+   "service14":"Data Architecture",
+   "service15": "We are implementing hybrid data architectures (on premises and in the Cloud) using leading DATA technologies.",
+   "formation1": "Our formations",
+   "formation2": "We offer face-to-face and distance training to small and large companies.",
+   "formation3": "Implement a Data Platform",
+   "formation4": "with Microsoft Azure",
+   "formation5": "Data Analysis and Visualization",
+   "formation6": "with Power BI"
+
+},
+
+"formation":{
+    "formation1":" Our Microsoft certified trainers (MCT) will make you benefit",
+    "formation2":"in order to meet the needs of your employees.",
+    "formation3":"Find your training",
+    "formation4":"Home",
+    "formation5":"Microsoft Azure",
+    "formation6":"This training aims to acquire the necessary knowledge allowing participants to have a good understanding of the Data offer and technologies available on the Microsoft Azure cloud. It allows to train Operational Data Engineers on the Azure platform.",
+    "formation7":"Power BI",
+    "formation8":"This training aims to acquire the necessary knowledge allowing participants to have a good understanding of data analysis and visualization using the Power BI tool.",
+    "formation9":"The objectives of the training",
+    "formation10":"Design, develop and explore data through Power BI, On-premises and Cloud reports and dashboards .",
+    "formation11":"The target audience for the training",
+    "formation12":"Prerequisites ",
+    "formation13":"Training "
+    
+},
+
+"carriere":{
+    "carriere1":"Work@S2AD Tech",
+    "carriere2":"Each year, junior and experienced employees are recruited in the areas of network infrastructure, security, storage and Cloud.",
+    "carriere3":"The experience of our consultants and the enthusiasm of the young graduates are the qualities that allow the creation of a relationship of trust with our clients.",
+    "carriere4":"Why Work at S2AD Tech ?",
+    "carriere5":"Innovation",
+    "carriere6":"Experience",
+    "carriere7":"Our goal is to encourage each employee to be proactive and to take initiatives to develop ever more innovative projects.",
+    "carriere8":"Integrity",
+    "carriere9":"Transparent culture",
+    "carriere10":"Our line of conduct: a spirit of mutual aid and permanent collaboration by ensuring employees are involved in stimulating and innovative projects. ",
+    "carriere11":"Career Roadmap",
+    "carriere12":"we are committed to training and upgrading all of our employees in terms of each emerging technology linked to various infrastructures",
+    "carriere13":"Careers "
+   
+
+},
+
+"propos":{
+    "propos1": "About",
+    "propos2": "We Provide Data Driven Solutions",
+    "propos3": "S2AD Tech deploys a range of expertises designed to meet the major challenges of companies and support their IT transformation projects.",
+    "propos4": "Our offers combine efficiency and simplicity to achieve the competitiveness and growth objectives of small and large companies. ",
+    "propos5": " Our vision",
+    "propos6": " Support you in the analysis and valuation of your data in order to help you in your decision-making.",
+    "propos7": "Our mission",
+    "propos8": "Help you gain in performance and profitability through the analysis and valuation of Data. ",
+    "propos9": " Who are we ?",
+    "propos10": "A team of specialists passionate about Cloud, Database and Data visualization."
+    
+},
+
+"contact":{
+    "contact1":"Contact us",
+    "contact2":"Name",
+    "contact3":"Email",
+    "contact4":"Phone",
+    "contact5":"Subject",
+    "contact6":"Your Message",
+    "contact7":"Send Message"
+},
+"test":{
+    "login":"Login",
+    "login1":"Email",
+    "login2":"Password",
+    "login3":"Login",
+    "login4":"Register",
+    "login5":"Forgot your password ?",
+    "login6":"Last name",
+    "login7":"First name"
+}
+
+
+
+}

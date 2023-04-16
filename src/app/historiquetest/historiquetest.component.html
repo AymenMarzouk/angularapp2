@@ -1,0 +1,180 @@
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg2">
+    <div class="container2">
+        <div class="page-title-content">
+            <h2>Tests</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>Tests</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+<!-- End Page Title Area -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<body>
+  <div class="main-content">
+    <div class="container mt-7">
+      
+      <!-- Dark table -->
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Historique des tests</h3>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-items-center table-dark table-flush">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Test</th>
+                    <th scope="col">Minutes</th>
+                    <th scope="col">Questions</th>
+                    <th scope="col">Résultat</th>
+                    <th scope="col">Score</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let testuser of Utilisateur_Tests">
+                  <tr>
+                    <th scope="row">
+                      <div class="media align-items-center">
+                        
+                        <div class="media-body">
+                          <span class="mb-0 text-sm">{{testuser.test.titre}}</span>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      {{testuser.test.nb_minutes}}
+                    </td>
+                    <td>
+                      <span class="badge badge-dot mr-4">
+                         {{testuser.test.nb_questions}}
+                      </span>
+                    </td>
+                    <td>
+                      <div class="avatar-group">
+                        <a  *ngIf ="testuser.flagechecsucces== 1 " class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Success">
+                          <img alt="Image placeholder" src="/assets/images/succes.png" class="rounded-circle">
+                        </a>
+                        <a  *ngIf ="testuser.flagechecsucces== 0 " class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Failed">
+                          <img alt="Image placeholder" src="/assets/images/failed.png" class="rounded-circle">
+                        </a>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">{{testuser.score}}%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="testuser.score" aria-valuemin="0" aria-valuemax="100" style="width: {{testuser.score}}%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right">
+                      <div class="dropdown">
+                        <a class="btn btn-sm btn-icon-only text-light"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                          <a class="dropdown-item" (click)="gettestsbyidtest(testuser.test.id)">Repasser le test</a>
+                          <a class="dropdown-item" (click)="voirdetailstest(testuser.utilisateur.id,testuser.id)">Voir Detail</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<section class="services-area bg-f2f6f9 ptb-110">
+	
+	<br>
+  <div class="container ">
+    <div class="search-box">
+      <div class="row">
+          <div class="col-md-5">
+              <h5>Recherche tous les tests</h5>
+          </div>
+         
+          <div class="col-md-6">
+            <input type="text" id="myInput"  class="form-control" placeholder="Search all fields e.g. HTML">
+           
+        </div> 
+              
+      </div>
+  </div>
+  <div class="search-list">
+      <div class="row">
+      <div class="col-md-3">
+        <h3><label style="margin-left:30px;">Quiz</label></h3>
+      </div>
+      <h6><a class="lien" routerLink="/test/categorie"><i class="fas fa-arrow-left"> Retour aux categories </i></a> </h6>
+    </div>
+  </div>
+  </div>
+
+<ul style="width:60%;margin:auto" *ngFor="let testuser of Utilisateur_Tests" class="list-group d-flex p-2 justify-content-center">
+  <li class="list-group-item">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <span class="test-titre">{{testuser.test.titre}}</span>
+        </div>
+        <div class="col d-flex">
+          <img src="/assets/images/question.png" alt="image" style="height: 60px;padding: 10px;" class="icone"><span class="test-question">{{testuser.test.nb_questions}} Questions</span>
+        </div>
+        <div class="col d-flex">
+          <img src="/assets/images/time.png" alt="image" style="height: 60px;padding: 10;" class="icone"> <span class="test-minute">{{testuser.test.nb_minutes}} Minutes </span>
+        </div>
+        <div class="col font-weight-bold">
+          <img src="/assets/images/score1.png" alt="image" style="height: 60px;padding: 10px;" class="icone"><span class="test-score">Score :</span>{{testuser.score}} %
+        </div>
+        <div class="col font-weight-bold">
+          <div *ngIf ="testuser.flagechecsucces== 1 "><img src="/assets/images/succes.png" alt="image" style="height: 60px;padding: 10px;"><label style=" color: green;">Success </label> </div>        
+          <div *ngIf ="testuser.flagechecsucces== 0 "><img src="/assets/images/failed.png" alt="image" style="height: 60px;padding: 10px;"><label style=" color: red;">Failed</label> </div>
+        </div>
+        <div class="col">
+          <button style="top: 25%" (click)="gettestsbyidtest(testuser.test.id)" class="btn btn-info btn-sm  ">Repasser le Test</button>
+        </div>
+        <div class="col">
+          <button  style="top: 25%" (click)="voirdetailstest(testuser.utilisateur.id,testuser.id)" class="btn btn-info btn-sm ">Voir details</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+-->
+

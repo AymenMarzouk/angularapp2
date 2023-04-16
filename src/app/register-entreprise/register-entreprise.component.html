@@ -1,0 +1,128 @@
+
+    
+   <!--Start Page Register Form-->
+    <body>   
+    <div class="container" >
+        <div class="d-flex justify-content-center h-100">
+            <div class="card" >
+                <div class="card-header">
+                    <h3>S'inscrire</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                    
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" formControlName="first_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }"  placeholder="FirstName">
+                            <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                                <div *ngIf="f.first_name.errors.required" >First Name is required !</div>
+                            </div>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" formControlName="last_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }"  placeholder="LastName">
+                            <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                                <div *ngIf="f.last_name.errors.required" >Last Name is required !</div>
+                            </div>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="text"  placeholder="email"  formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  placeholder="email">
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required" >Email is required !</div>
+                                <div *ngIf="f.email.errors.pattern" >Please write a valid Email address !</div>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <span class="input-group-text">
+                            <input type="password" id="password" placeholder="mot de passe"formControlName="password1" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password1.errors }" />
+                            <i id="pass-status" aria-hidden="true" class="fa fa-eye" onclick="if (password.type == 'text') password.type = 'password';
+                            else password.type = 'text';"></i></span>
+                            <div *ngIf="submitted && f.password1.errors" class="invalid-feedback">
+                            <div *ngIf="f.password1.errors.required" >Password is required !</div>
+                            <div *ngIf="f.password1.errors.pattern" >Password must include minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character !</div>
+                            </div>
+                            </div>
+                            <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <span class="input-group-text">
+                            <input type="password" id="password1" placeholder="Confirmer votre mot de passe" formControlName="password2" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password2.errors }" />
+                            <i id="pass-status" aria-hidden="true" class="fa fa-eye" onclick="if (password1.type == 'text') password1.type = 'password';
+                            else password1.type = 'text';"></i></span>
+                            <div *ngIf="submitted && f.password2.errors" class="invalid-feedback">
+                            <div *ngIf="f.password2.errors.required">Password is required !</div>
+                            <div *ngIf="f.password2.errors.confirmedValidator" >Password and Confirm Password must be match !</div>
+                            </div>
+                            </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="number"  placeholder="Phone Number" formControlName="phone_number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone_number.errors }" />
+                            <div *ngIf="submitted && f.phone_number.errors" class="invalid-feedback">
+                                <div *ngIf="f.phone_number.errors.required">Phone number is required !</div>
+                            </div>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="text"  placeholder="Company" formControlName="company" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.company.errors }" />
+                            <div *ngIf="submitted && f.company.errors" class="invalid-feedback">
+                                <div *ngIf="f.company.errors.required">Company is required !</div>
+                            </div>
+                        </div>
+                        <div class="input-group form-group ">
+                            <input type="checkbox" formControlName="acceptcheckbox"  class="form-control" class="check"  id="accept" [ngClass]="{ 'is-invalid': submitted && f.acceptcheckbox.errors }">
+                            <label class="acceptlabel" for="accept">
+                                j'accepte les conditions spécifiques de mon compte dévelopeur
+                              </label>
+                              <div *ngIf="submitted && f.acceptcheckbox.errors" class="invalid-feedback " >
+                                <div *ngIf="f.acceptcheckbox.errors.required" > Check this please !</div>
+                            </div>
+                        </div>
+                        <div class="form-group float-right">
+                            <button class="btn btn-lg btn-outline-warning">Register Company</button> 
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center btn btn-secondary btn-lg active">
+                        Vous avez un compte?  <br> 
+                         <a  style = "color : orange" routerLink="/login">   S'identifier</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    
+
+
+
+
+
+    </body>
+   <!--End Page Register Form-->
+
+ 
